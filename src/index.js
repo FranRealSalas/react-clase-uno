@@ -66,8 +66,9 @@ ReactDOM.render(
     //<MatchNombre nombre="fran"/>
     //<PasswordInput minLength={8}/>
     <ValidationInput
-    validation = {(value)=>value? true : false}
-    minLength={8}
+        validation = {(value)=>value? true : false}
+        minLength={8}
+        isPassword
     />
     ,document.getElementById("react-app")
 );*/

@@ -37,12 +37,28 @@ export function ControlledCheckbox(props) {
  * }
  */
 
+//Con object.entries
+/*
 export function CheckboxListWithState(props) {
     return(
         <ul>
             {Object.entries(props.items).map((item)=>{
                 return <li key={item[0]}>
                     <ControlledCheckbox name={item[0]} value={item[1]}
+                    onChange={()=>{console.log("Funciona")}}/>
+                </li>
+            })}
+        </ul>
+    )
+}
+*/
+//Con object.keys
+export function CheckboxListWithState(props) {
+    return(
+        <ul>
+            {Object.keys(props.items).map((key)=>{
+                return <li key={key}>
+                    <ControlledCheckbox name={key} value={props.items[key]}
                     onChange={()=>{console.log("Funciona")}}/>
                 </li>
             })}
